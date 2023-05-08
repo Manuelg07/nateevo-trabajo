@@ -1,0 +1,37 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container-fluid
+    a.navbar-brand(href='#')
+      img(src='assets/images/nateevo-logo.png', alt='Logo', class='logo')
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarNav
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link(href='#') Option 1
+        li.nav-item
+          a.nav-link(href='#') Option 2
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#', id='navbarDropdown', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+            | Option 3
+          ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            li
+              a.dropdown-item(href='#') Submenu 1
+            li
+              a.dropdown-item(href='#') Submenu 2
+            li
+              a.dropdown-item(href='#') Submenu 3
+        li.nav-item
+          a.nav-link(href='#') Option 4
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#', id='navbarLanguage', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+            span.mx-2 En
+          ul.dropdown-menu.dropdown-menu-end(aria-labelledby='navbarLanguage')
+            li
+              a.dropdown-item(href='#') Es
+            li
+              a.dropdown-item(href='#') En
+        li.nav-item
+          a.nav-link(href='#') Option 5
+      form.d-flex.ms-auto
+        button.btn.btn-outline-primary(type='submit') Change Language
+

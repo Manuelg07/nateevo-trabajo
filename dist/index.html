@@ -1,0 +1,14 @@
+<head><script defer src="bundle.js"></script></head>doctype html
+html
+ head
+  title My Project
+  link(rel='stylesheet', href='css/style.css')
+  script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper.min.js")
+  script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js", defer)
+
+  body
+    include components/header/header.pug
+    include components/hero/hero.pug
+    include components/news/news.pug
+    include components/footer/footer.pug

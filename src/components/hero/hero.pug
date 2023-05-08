@@ -1,0 +1,28 @@
+section.hero
+  .carousel.slide(data-bs-ride='carousel')
+    ol.carousel-indicators
+      li(data-bs-target='#carouselExampleIndicators', data-bs-slide-to='0', class='active')
+      li(data-bs-target='#carouselExampleIndicators', data-bs-slide-to='1')
+      li(data-bs-target='#carouselExampleIndicators', data-bs-slide-to='2')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='https://via.placeholder.com/800x600.png?text=First+slide', alt='First slide')
+        .carousel-caption.d-none.d-md-block
+          h5 First slide
+          p Nulla vitae elit libero, a pharetra augue mollis interdum.
+      .carousel-item
+        img.d-block.w-100(src='https://via.placeholder.com/800x600.png?text=Second+slide', alt='Second slide')
+        .carousel-caption.d-none.d-md-block
+          h5 Second slide
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .carousel-item
+        img.d-block.w-100(src='https://via.placeholder.com/800x600.png?text=Third+slide', alt='Third slide')
+        .carousel-caption.d-none.d-md-block
+          h5 Third slide
+          p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+    a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next

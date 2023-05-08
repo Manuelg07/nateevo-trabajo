@@ -1,0 +1,25 @@
+
+// Import Bootstrap's Sass files
+@import './assets/vendors/bootstrap/css/bootstrap';
+@import './components/header/header';
+@import './components/footer/footer';
+@import './components/news/news';
+// Add your own custom Sass code here
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  .wrapper {
+    min-height: 100%;
+    position: relative;
+  }

@@ -1,0 +1,53 @@
+const gulp = require("gulp");
+const pug = require("gulp-pug");
+const sass = require("gulp-sass")(require("sass"));
+const browserSync = require("browser-sync").create();
+const webpack = require("webpack");
+const webpackDevServer = require("webpack-dev-server");
+const path = require("path");
+
+gulp.task('html', function () {
+  return gulp
+    .src('src/index.pug')
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
+});
+
+
+gulp.task("sass", function () {
+  return gulp
+    .src("src/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("dist/css"));
+    // .pipe(browserSync.stream());
+});
+
+gulp.task("images", function () {
+  return gulp
+    .src("src/assets/images/**/*")
+    .pipe(gulp.dest("dist/assets/images"));
+});
+
+gulp.task('watch', function () {
+  return new Promise(function (resolve) {
+    const compiler = webpack(require('./webpack.config.js'));
+    const server = new webpackDevServer(compiler, {
+      hot: true,
+      contentBase: path.join(__dirname, 'dist'),
+      compress: true,
+      port: 3000,
+    });
+    server.listen(3000, 'localhost', function () {
+      console.log('Webpack dev server listening on port 3000');
+      resolve();
+    });
+  });
+});
+
+gulp.task(
+  'default',
+  gulp.series('html', 'sass', 'images', 'watch', function (done) {
+    done();
+  })
+);
+
